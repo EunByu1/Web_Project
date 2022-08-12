@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect, useMemo} from 'react';
+import {useState, useRef, useEffect, useMemo, useCallback} from 'react';
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
@@ -43,7 +43,8 @@ function App() {
 
 
 // 저장 관련 State 변경 함수  
-  const onCreate = (author, content, emotion) => {
+// useCallback : 함수 재사용 
+  const onCreate = useCallback((author, content, emotion) => {
       const created_date = new Date().getTime();
       const newItem = {
         author, 
@@ -53,34 +54,30 @@ function App() {
         id : dateId.current
       }
       dateId.current += 1;
-      setData([newItem, ...data]);
-  };
+      setData((data)=>[newItem, ...data]);
+  }, []);
 
 
 
 // 삭제 관련 State 변경 함수 
-  const onRemove = (targetId)=>{
-    console.log(`${targetId}가 삭제되었습니다.`);
-    const newDiaryList = data.filter((it)=>it.id !== targetId);
-    setData(newDiaryList);
-  }
+  const onRemove = useCallback((targetId)=>{
+    setData((data) => data.filter((it)=>it.id !== targetId));
+  }, []);
 
 
 
 // 수정 관련 state 변경 함수 
-  const onEdit = (targetId, newContent) => {
-    setData(
+  const onEdit = useCallback((targetId, newContent) => {
+    setData((data)=>
       data.map((it) => 
         it.id === targetId ? {...it, content:newContent} : it)
     )
-  }
+  }, []);
   
 
 
 // Memoization : 일기 분석 값 return
   const getDiaryAnalysis = useMemo(() => {
-    console.log("일기 분석 시작");
-
     // 1) 기분이 좋은 일기 개수 
     const goodCount = data.filter((it)=> it.emotion >= 3).length;
     
