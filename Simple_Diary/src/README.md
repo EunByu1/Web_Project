@@ -1,4 +1,4 @@
-<h2>Simple_Diary</h2>
+<h2>【 Simple_Diary 】</h2>
 
 : The Simple_Diary project was created using React as a clone coding result.
 
