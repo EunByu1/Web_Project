@@ -1,14 +1,47 @@
-import {useState, useRef, useEffect, useMemo, useCallback} from 'react';
+import {useRef, useEffect, useMemo, useCallback, useReducer} from 'react';
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
 
 
+const reducer = (state, action)=> {
+  switch(action.type){
+    case 'INIT': {
+      return action.data
+    }
+
+    case 'CREATE': {
+      const created_date = new Date().getTime()
+      const newItem = {
+        ...action.data,
+        created_date
+      }
+      return [newItem, ...state]
+    }
+
+    case 'REMOVE': {
+      return state.filter((it) => it.id !== action.targetId);
+    }
+
+    case 'EDIT': {
+      return state.map((it) => 
+      it.id === action.targetId ? {...it, content:action.newContent} : it);
+    }
+    
+    default :
+      return state;
+  }
+}
+
 function App() {
-// State 설정  
-  const [data, setData] = useState([]);
+// useState를 이용하여 State 설정  
+  //const [data, setData] = useState([]);
 
 
+// useReducer를 이용하여 State 설정 
+  const [data, dispatch] = useReducer(reducer, []);
+
+  
 // id 설정을 위한 Reference Object
   const dateId = useRef(0);
 
@@ -28,9 +61,8 @@ function App() {
         id: dateId.current++
       };
     });
-    
-    console.log(initData);
-    setData(initData);
+
+    dispatch({type:"INIT", data:initData})
   };
 
 
@@ -45,33 +77,27 @@ function App() {
 // 저장 관련 State 변경 함수  
 // useCallback : 함수 재사용 
   const onCreate = useCallback((author, content, emotion) => {
-      const created_date = new Date().getTime();
-      const newItem = {
-        author, 
-        content,
-        emotion,
-        created_date,
-        id : dateId.current
-      }
+
+      dispatch({
+        type:'CREATE', 
+        data:{author, content, emotion, id : dateId.current}
+      })
+
       dateId.current += 1;
-      setData((data)=>[newItem, ...data]);
   }, []);
 
 
 
 // 삭제 관련 State 변경 함수 
   const onRemove = useCallback((targetId)=>{
-    setData((data) => data.filter((it)=>it.id !== targetId));
+    dispatch({type:"REMOVE", targetId})
   }, []);
 
 
 
 // 수정 관련 state 변경 함수 
   const onEdit = useCallback((targetId, newContent) => {
-    setData((data)=>
-      data.map((it) => 
-        it.id === targetId ? {...it, content:newContent} : it)
-    )
+    dispatch({type : "EDIT", targetId, newContent})
   }, []);
   
 
