@@ -33,7 +33,6 @@ const reducer = (state, action)=> {
   }
 }
 
-
 // Context 내보내기 
 export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
