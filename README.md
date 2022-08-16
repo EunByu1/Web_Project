@@ -3,3 +3,4 @@
 <h3> project in progress </h3>
 
 * <a href="https://github.com/EunByu1/Web_Project/tree/main/Simple_Diary/src"> Simple_Diary </a>
+* Emotion Diary
