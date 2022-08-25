@@ -1,6 +1,6 @@
 <h2>【 Control Dashboard 】</h2>
 
-: Self-produced Control Dashboard web page with a Hanium project
+&nbsp;&nbsp;: Self-produced Control Dashboard web page with a Hanium project
 
 ---
 * Main : index.html
