@@ -2,5 +2,5 @@
 
 <h3> project in progress </h3>
 
-* <a href="https://github.com/EunByu1/Web_Project/tree/main/Simple_Diary/src"> Simple_Diary </a>
-* <a href="https://github.com/EunByu1/Web_Project/tree/main/GreenAI"> GreenAI - Web_DashBoard </a>
+* Clone &nbsp;&nbsp;&nbsp; | <a href="https://github.com/EunByu1/Web_Project/tree/main/Simple_Diary/src"> &nbsp; Simple_Diary </a>
+* Directly&nbsp; |<a href="https://github.com/EunByu1/Web_Project/tree/main/GreenAI"> &nbsp; GreenAI - Web_DashBoard </a>
