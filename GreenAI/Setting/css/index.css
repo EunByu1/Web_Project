@@ -5,7 +5,7 @@
     padding-bottom: 0px;
     padding-top: 0px;
     margin-bottom: 6px;
-    margin-top: 8px;
+    margin-top: 5px;
     background-color: #1E1D2D;
     height: 110px;
 }
@@ -39,12 +39,12 @@
     background-color: #1E1D2D;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 #side-menu {
     width:250px;
-    height:773px;
+    height:740px;
     background-color: #159573de;
     color: white;
     margin-left: 21px;;
@@ -54,8 +54,8 @@
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    margin-top:15px;
-    margin-bottom: 20px;
+    margin-top:7px;
+    margin-bottom: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top:1px solid white;
@@ -66,7 +66,7 @@
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 13px;
-    padding-top: 2px;
+    padding-top: 1px;
     border-bottom:1px dotted white;
     border-top:1px dotted white;
 }
@@ -83,7 +83,7 @@
 #side-menu-4 {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    margin-top:18px;
+    margin-top:8px;
     border-bottom:1px dotted white;
     border-top:1px dotted white;
 }
@@ -91,13 +91,13 @@
 #side-menu-5 {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    margin-top:17px;
+    margin-top:20px;
     padding-bottom: 13px;
     border-bottom:1px dotted white;
 }
 
 #side-menu-6 {
-    margin-top:14px;
+    margin-top:8px;
     padding-top:0px;
     padding-left:138px;
     padding-bottom:4px;
@@ -136,12 +136,14 @@
     background-color: #383a51;
     padding:0px;
     margin-left:12px;
+    height: 253px;
 }
 
 #chart_2-2 {
     background-color: #383a51;
     padding:0px;
     margin-left:12px;
+    height: 253px;
 }
 
 #chart_2-3 {
@@ -149,6 +151,7 @@
     padding:0px;
     margin-left:12px;
     margin-right:1px;  
+    height: 253px;
 }
 
 #img-a {
