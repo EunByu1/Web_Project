@@ -8,11 +8,12 @@
 * Style Sheet : index.css
 * Convert Sample Data : convert_data.py
 ---
-* language : HTML | CSS | Javascript 
-* library : chart.js
-* framework : bootstrap
+* Language : HTML | CSS | Javascript 
+* Library : chart.js
+* Framework : bootstrap
+* Deploy : Netlify
 ---
 <div align="center">
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/89649741/186711460-95ce073d-88a2-4c49-a165-ae91ed539e97.png" >
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/89649741/186826891-67fc2e21-0c00-49c0-8647-114dbfa9a6cd.png">
 </div>
 
