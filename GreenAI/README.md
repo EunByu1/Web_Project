@@ -8,7 +8,7 @@
 * Style Sheet : index.css
 * Convert Sample Data : convert_data.py
 ---
-* Language : HTML | CSS | Javascript 
+* Language : HTML | CSS | Javascript | Python
 * Library : chart.js
 * Framework : bootstrap
 * Deploy : Netlify
