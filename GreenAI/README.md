@@ -9,8 +9,8 @@
 * Convert Sample Data : convert_data.py
 ---
 * Language : HTML | CSS | Javascript | Python
-* Library : chart.js
-* Framework : bootstrap
+* Library : Chart.js
+* Framework : Bootstrap
 * Deploy : Netlify
 ---
 <div align="center">
