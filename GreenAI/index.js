@@ -11,4 +11,3 @@ function humidity_data() {
 function metter_data() {
 	return [1.7,1.6,1.6,1.3,1.1,1.5,1.7]
 }
-
