@@ -1,6 +1,13 @@
 # GreenAI - Web_DashBoard 
 #### 
 ---
+&nbsp; &nbsp; : Source code management in gitlab provided by the competition (3D model, web, app etc..) <br>
+
+---
+<br>
+
+---
+## Development_Skill
 - Language : HTML5 | CSS3 | JavaScript | Python 
 - Library : chart.js | Numpy | Pandas 
 - Framework : BootStrap
